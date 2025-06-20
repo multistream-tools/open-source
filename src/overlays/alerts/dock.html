@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none';script-src-elem 'self';style-src-elem 'self' https: data:;font-src https: data:;img-src https: data:;connect-src 'self'"
+    />
+    <meta charset="utf-8" />
+    <meta name="referrer" content="same-origin" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>multistream.tools - Alerts dock</title>
+    <script type="module" src="./dock.html.js"></script>
+    <link rel="stylesheet" href="../../core.css" />
+    <link rel="stylesheet" href="../../overlay.css" />
+    <link rel="stylesheet" href="../../dock.css" />
+  </head>
+  <body>
+    <form id="$form" class="page">
+      <section id="$fields" class="content"></section>
+      <footer class="toolbar">
+        <span class="logo"></span>
+        <label class="field">
+          <input id="$platforms" class="input" type="checkbox" checked />
+          <span class="label" data-i18n="platforms">Platforms</span>
+        </label>
+        <label class="field">
+          <input id="$messages" class="input" type="checkbox" checked />
+          <span class="label" data-i18n="messages">Messages</span>
+        </label>
+        <button class="button danger" data-i18n="apply">Apply</button>
+      </footer>
+    </form>
+  </body>
+</html>

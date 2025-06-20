@@ -1,0 +1,49 @@
+:root {
+  --background: rgba(0, 0, 0, 0.95); /* DRY */
+  --borderRadius: var(--spacing);
+  --fontSize: 27px; /* DRY */
+  --fontWeight: 700; /* DRY */
+}
+
+body {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+}
+
+/* DRY */
+img {
+  position: relative;
+  top: 0.175em;
+}
+
+#featured:empty {
+  transform: translateY(calc(100% + var(--spacing200)));
+}
+
+#featured:not(:empty) {
+  background: var(--background);
+  border-radius: var(--borderRadius);
+  margin: var(--spacing200);
+  padding: var(--spacing);
+  transition: transform 300ms cubic-bezier(0.5, -0.5, 0.5, 1.5); /* DRY */
+}
+
+.source,
+.user {
+  display: inline-block;
+}
+
+.source {
+  font-size: 1.25rem;
+  margin-right: var(--spacing75);
+  vertical-align: middle;
+}
+
+.badge {
+  display: none; /* TODO: configurable? */
+}
+
+.message {
+  margin-top: var(--spacing50);
+}
