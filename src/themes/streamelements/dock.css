@@ -1,0 +1,107 @@
+:root {
+  --color1: #e3e3e3;
+  --color2: #3f3f40;
+  --color3: #232428;
+  --color4: #131315;
+  --color5: var(--color3);
+  --colorCheer: #56d5fd;
+  --colorFollower: #5684fd;
+  --colorGifted: #46dc8e;
+  --colorMerch: #ff00b8;
+  --colorMessage: #bababc;
+  --colorRaid: #8442ef;
+  --colorReward: #707070;
+  --colorRedemption: var(--colorReward);
+  --colorSubscriber: #efb142;
+  --colorTip: #f53656;
+  --textTier2: 't2 ';
+  --textTier3: 't3 ';
+}
+
+.tabs > .page#settings:target ~ .toolbar > .tab[href='#settings'],
+.tabs > .page:not(#settings):target ~ .toolbar > .tab:not([href='#settings']) {
+  position: relative;
+  top: var(--borderSize);
+}
+
+.tabs > .toolbar {
+  border-bottom: var(--border) var(--color2);
+}
+
+.event[data-message]::after,
+.event > .message {
+  color: var(--colorMessage);
+}
+
+.event > .type {
+  background: var(--color1);
+  border-radius: var(--borderRadius);
+  color: var(--color5);
+  padding: var(--spacing25) var(--spacing50);
+}
+
+.event > .type.merch {
+  background: var(--colorMerch);
+}
+
+.event > .type.tip {
+  background: var(--colorTip);
+}
+
+.event > .type.subscriber,
+.event > .type.supporter,
+.event > .type.sponsor {
+  background: var(--colorSubscriber);
+}
+
+.event > .type.cheer,
+.event > .type.gift,
+.event > .type.stars,
+.event > .type.elixir,
+.event > .type.superchat {
+  background: var(--colorCheer);
+}
+
+.event > .type.follower,
+.event > .type.fan,
+.event > .type.like,
+.event > .type.videolike,
+.event > .source.youtube + .type.subscriber {
+  background: var(--colorFollower);
+}
+
+.event > .type.raid,
+.event > .type.share {
+  background: var(--colorRaid);
+}
+
+.event>.type.redemption {
+  background: var(--colorRedemption);
+}
+
+.event>.type.reward {
+  background: var(--colorReward);
+}
+
+.event > .type.sponsor[data-amount='1']::after,
+.event > .type.supporter[data-amount='1']::after,
+.event > .source.twitch + .type[data-tier^='1']::before,
+.event > .source:not(.youtube) + .type.subscriber[data-amount='1']::after {
+  display: none;
+}
+
+.event > .source.twitch + .type[data-tier^='2']::before {
+  content: var(--textTier2);
+}
+
+.event > .source.twitch + .type[data-tier^='3']::before {
+  content: var(--textTier3);
+}
+
+.event > .details ~ .type.subscriber,
+.event > .details ~ .type.sponsor,
+.event[data-sender] > .type.subscriber,
+.event[data-sender] > .type.supporter,
+.event[data-sender] > .type.sponsor {
+  background: var(--colorGifted);
+}
