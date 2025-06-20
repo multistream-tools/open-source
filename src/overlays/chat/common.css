@@ -1,0 +1,16 @@
+:root {
+  --accentColor: #50ffff;
+  --highlightColor: rgba(170, 26, 248, 0.5);
+}
+
+img {
+  height: 1em;
+}
+
+.user {
+  color: var(--accentColor);
+}
+
+.action {
+  font-style: italic;
+}

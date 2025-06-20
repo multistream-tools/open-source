@@ -1,0 +1,50 @@
+:root {
+  --background: black;
+  --duration: 0.5s;
+  --fontSize: 27px; /* DRY */
+  --fontWeight: 700; /* DRY */
+}
+
+.alert,
+.image {
+  width: 100%;
+}
+
+.alert,
+.footer:not(:empty) {
+  align-items: center;
+  display: flex;
+}
+
+.alert {
+  bottom: 0;
+  flex-direction: column;
+  max-height: 100%;
+  position: absolute;
+  transition: all var(--duration) ease-in-out; /* DRY */
+}
+
+.image,
+.message {
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+}
+
+.image {
+  height: 100%;
+  max-height: max-content;
+  max-width: max-content;
+}
+
+.footer,
+.platform {
+  flex: none;
+}
+
+.footer:not(:empty) {
+  background: var(--background);
+  gap: var(--spacing);
+  justify-content: center;
+  padding: var(--spacing);
+}

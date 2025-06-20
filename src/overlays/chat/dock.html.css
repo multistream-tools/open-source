@@ -1,0 +1,66 @@
+:root {
+  --borderSize: 2px;
+  --spacing: 0.625rem;
+}
+
+img {
+  position: relative;
+  top: 0.175em;
+}
+
+.event:hover {
+  cursor: pointer;
+  outline: var(--border) var(--colorDanger);
+}
+
+.first {
+  outline: var(--border) var(--colorInfo);
+}
+
+.highlighted {
+  background: var(--highlightColor);
+}
+
+.badge {
+  margin-right: var(--spacing25);
+}
+
+.message {
+  word-break: break-word;
+}
+
+/* TODO: cleanup + DRY */
+
+.event {
+  display: block;
+  margin-left: calc(var(--spacing) * 2.5);
+  padding: var(--spacing75);
+  position: relative;
+}
+
+.event + .event {
+  margin-top: var(--spacing50) !important;
+}
+
+.source,
+.user {
+  display: inline-block;
+}
+
+.source {
+  font-size: 1rem !important;
+  height: 100%;
+  left: 0;
+  padding-right: var(--spacing75);
+  position: absolute;
+  top: var(--spacing75);
+  transform: translateX(-100%);
+}
+
+.user {
+  margin-right: var(--spacing75);
+}
+
+.message {
+  display: inline;
+}

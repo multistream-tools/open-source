@@ -1,0 +1,49 @@
+:root {
+  --fontSize: 27px;
+  --fontWeight: 700;
+  --shadowColor: black;
+  --shadowSize: 2px;
+}
+
+#chat,
+.message,
+.user,
+.text {
+  align-items: center;
+  display: flex;
+}
+
+/* FIXME: ids + min height + body? */
+#chat {
+  gap: var(--spacing75);
+  justify-content: flex-end;
+  line-height: 1; /* TODO */
+  padding: var(--spacing50);
+  text-shadow: var(--shadowColor) var(--shadowSize) var(--shadowSize) 0;
+  white-space: nowrap;
+}
+
+.message,
+.user,
+.badge,
+.text,
+.emote,
+.twitch,
+.youtube {
+  flex: none;
+}
+
+.message {
+  gap: var(--spacing50);
+}
+
+.highlighted > .text {
+  background: var(--highlightColor);
+  border-radius: var(--borderRadius);
+  padding: 0 var(--spacing25);
+}
+
+.user,
+.text {
+  gap: var(--spacing25);
+}
